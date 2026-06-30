@@ -1,7 +1,17 @@
 # Building Better Clouds
 
-Terraform-powered CMMC-compliant AI Governance Lab
+**Terraforming secure, compliant cloud environments for the AI era.**
 
-**"Building Better Worlds... in the Cloud"**
+A hands-on GRC + DevSecOps project focused on CMMC-compliant infrastructure, AI governance, and automation.
 
-Project for learning and demonstrating Infrastructure as Code, GRC automation, and secure AI workloads.
+## Goals
+- IaC with Terraform for repeatable secure deployments
+- Automated compliance monitoring
+- AI workload governance (risk scoring, evidence collection)
+- Portfolio showcase for GRC Engineering / Cloud Compliance roles
+
+## Tech Stack
+- Terraform (IaC)
+- AWS
+- Python (automation + risk models)
+- CMMC / NIST alignment

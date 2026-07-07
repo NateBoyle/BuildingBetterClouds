@@ -2,28 +2,33 @@
 
 **Terraforming secure, compliant cloud environments for the AI era.**
 
-A hands-on GRC + DevSecOps project focused on CMMC-compliant infrastructure, AI governance, and automation.
+A hands-on GRC + DevSecOps portfolio project focused on CMMC-compliant infrastructure, AI workload governance, and automated evidence collection.
 
-## Current Architecture
-- **VPC** with public/private subnets across 2 AZs (us-west-2)
-- Internet Gateway + NAT Gateway for secure outbound access
-- VPC Flow Logs enabled (evidence collection to S3)
-- Encrypted S3 bucket for compliance artifacts
+## Architecture Highlights
 
-## Goals
-- IaC with Terraform for repeatable secure deployments
-- Automated compliance monitoring
-- AI workload governance (risk scoring, evidence collection)
-- Portfolio showcase for GRC Engineering / Cloud Compliance roles
+- **VPC**: Multi-AZ public/private subnets with NAT Gateway
+- **Evidence Collection**: VPC Flow Logs → Encrypted S3 bucket (versioned + lifecycle)
+- **Security**: Layered Security Groups (public bastion + private)
+- **Compute**:
+  - Bastion EC2 instance (public subnet)
+  - SageMaker Domains:
+    - `custom-models` domain
+    - `prebuilt-models` domain
+- **Compliance**: CMMC-aligned tagging, encryption, private networking, audit logs
 
 ## Tech Stack
-- Terraform (IaC)
-- AWS (VPC, S3, Flow Logs)
-- Python (planned automation + risk models)
-- CMMC / NIST alignment
 
-## Deployment
-```bash
-terraform init
-terraform plan
-terraform apply
+- Terraform (IaC)
+- AWS (VPC, S3, EC2, SageMaker)
+- Security & Compliance best practices
+
+## Project Structure
+├── main.tf
+├── networking.tf
+├── s3.tf
+├── iam.tf
+├── security.tf
+├── ec2.tf
+├── sagemaker.tf
+├── outputs.tf
+└── README.md

@@ -23,12 +23,12 @@ A hands-on GRC + DevSecOps portfolio project focused on CMMC-compliant infrastru
 - Security & Compliance best practices
 
 ## Project Structure
-├── main.tf
-├── networking.tf
-├── s3.tf
-├── iam.tf
-├── security.tf
-├── ec2.tf
-├── sagemaker.tf
-├── outputs.tf
+├── main.tf  
+├── networking.tf  
+├── s3.tf  
+├── iam.tf  
+├── security.tf  
+├── ec2.tf  
+├── sagemaker.tf  
+├── outputs.tf  
 └── README.md

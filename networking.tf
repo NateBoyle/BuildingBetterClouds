@@ -127,12 +127,12 @@ resource "aws_route_table_association" "private" {
 
 # VPC Flow Logs
 resource "aws_flow_log" "main" {
-  vpc_id                = aws_vpc.main.id
-  traffic_type          = "ALL"
-  log_destination_type  = "s3"
-  log_destination       = aws_s3_bucket.evidence.arn
-  log_format            = "$${version} $${account-id} $${interface-id} $${srcaddr} $${dstaddr} $${srcport} $${dstport} $${protocol} $${packets} $${bytes} $${start} $${end} $${action} $${log-status}"
-  
+  vpc_id               = aws_vpc.main.id
+  traffic_type         = "ALL"
+  log_destination_type = "s3"
+  log_destination      = aws_s3_bucket.evidence.arn
+  log_format           = "$${version} $${account-id} $${interface-id} $${srcaddr} $${dstaddr} $${srcport} $${dstport} $${protocol} $${packets} $${bytes} $${start} $${end} $${action} $${log-status}"
+
 
   destination_options {
     file_format                = "plain-text"

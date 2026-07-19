@@ -22,5 +22,5 @@ variable "project_name" {
 variable "key_name" {
   description = "Name of the SSH key pair"
   type        = string
-  default     = "building-better-clouds-key" 
+  default     = "building-better-clouds-key"
 }
